@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
 
 /**
- * Created by darkc_000 on 4/19/2017.
+ * Created by nezcal on 4/19/2017 at 11:33 PM at 11:33 PM.
  */
 public class CommonProxy {
     public void preInit(FMLPreInitializationEvent e) {
