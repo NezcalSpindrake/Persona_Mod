@@ -1,17 +1,14 @@
 package nezcal.persona;
 
 import com.google.common.collect.Lists;
-import com.sun.istack.internal.Nullable;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
 import javax.annotation.Nonnull;
-import java.util.Collections;
 import java.util.List;
 
 
@@ -20,7 +17,7 @@ import java.util.List;
  */
 public class TeleportCommand extends CommandBase {
     public TeleportCommand(){
-        aliases = Lists.newArrayList(main.MODID, "TP", "tp");
+        aliases = Lists.newArrayList(main.MODID, "ctp");
     }
 
     private final List<String> aliases;
@@ -28,13 +25,13 @@ public class TeleportCommand extends CommandBase {
     @Override
     @Nonnull
     public String getName() {
-        return "tp";
+        return "ctp";
     }
 
     @Override
     @Nonnull
     public String getUsage(@Nonnull ICommandSender sender) {
-        return "tp <id>";
+        return "/ctp <id>";
     }
 
     @Override
@@ -67,9 +64,5 @@ public class TeleportCommand extends CommandBase {
         return true;
     }
 
-    @Override
-    @Nonnull
-    public List<String> getTabCompletionOptions(MinecraftServer server, ICommandSender sender, String[] args, @Nullable BlockPos pos) {
-        return Collections.emptyList();
-    }
+
 }
