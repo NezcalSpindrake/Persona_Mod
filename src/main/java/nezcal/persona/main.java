@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 
 /**
- * Created by nezcal on 4/19/2017.
+ * Created by nezcal on 4/19/2017 at 11:33 PM.
  */
 
 @Mod(modid = main.MODID, name = main.MODNAME, version = main.MODVERSION, useMetadata = true)
