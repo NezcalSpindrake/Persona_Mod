@@ -11,9 +11,13 @@ public class ModItems {
 
     public static ItemArcanaCard arcanaCard;
 
+    public static ItemContractorsKey contractorsKey;
+
     public static void init() {
         arcanaCard = new ItemArcanaCard();
+        contractorsKey = new ItemContractorsKey();
     }
+
 
 
     public static void initModels() {
