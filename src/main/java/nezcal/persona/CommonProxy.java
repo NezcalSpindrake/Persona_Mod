@@ -13,7 +13,7 @@ public class CommonProxy {
     public void preInit(FMLPreInitializationEvent e) {
        // Initialization of blocks and items typically goes here:
        // ModBlocks.init();
-       // ModItems.init();
+        ModItems.init();
        // ModCrafting.init();
     }
 
