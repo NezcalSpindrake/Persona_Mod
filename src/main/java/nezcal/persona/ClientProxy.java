@@ -1,6 +1,7 @@
 package nezcal.persona;
 
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import static nezcal.persona.ModItems.arcanaCard;
 
 
 /**
@@ -12,5 +13,7 @@ public class ClientProxy extends CommonProxy {
         super.preInit(e);
         // Typically initialization of models and such goes here:
         //ModRenderers.preInit();
+        ModItems.initModels();
     }
+
 }

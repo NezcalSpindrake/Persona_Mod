@@ -15,8 +15,8 @@ public class ModItems {
         arcanaCard = new ItemArcanaCard();
     }
 
-    @SideOnly(Side.CLIENT)
-    public void initModels() {
-        ItemArcanaCard.initModel();
+
+    public static void initModels() {
+        arcanaCard.initModel();
     }
 }
