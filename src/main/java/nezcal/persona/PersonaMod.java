@@ -12,8 +12,8 @@ import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
  * Created by nezcal on 4/19/2017 at 11:33 PM.
  */
 
-@Mod(modid = main.MODID, name = main.MODNAME, version = main.MODVERSION, useMetadata = true)
-public class main {
+@Mod(modid = PersonaMod.MODID, name = PersonaMod.MODNAME, version = PersonaMod.MODVERSION, useMetadata = true)
+public class PersonaMod {
     public static final String MODID = "persona";
     public static final String MODNAME = "Persona";
     public static final String MODVERSION = "0.0.1";
@@ -22,7 +22,7 @@ public class main {
     public static CommonProxy proxy;
 
     @Mod.Instance
-    public static main instance;
+    public static PersonaMod instance;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
@@ -43,4 +43,6 @@ public class main {
     public void serverLoad(FMLServerStartingEvent event) {
         event.registerServerCommand(new TeleportCommand());
     }
+
+    public static final PersonaTab creativeTab = new PersonaTab();
 }
