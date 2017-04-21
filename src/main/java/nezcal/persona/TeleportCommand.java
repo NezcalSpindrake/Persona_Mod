@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class TeleportCommand extends CommandBase {
     public TeleportCommand(){
-        aliases = Lists.newArrayList(main.MODID, "ctp");
+        aliases = Lists.newArrayList(PersonaMod.MODID, "ctp");
     }
 
     private final List<String> aliases;
