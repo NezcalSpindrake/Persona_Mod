@@ -39,6 +39,10 @@ public class PersonaMod {
         proxy.postInit(e);
     }
 
+    @Mod.EventHandler
+    public void serverLoad(FMLServerStartingEvent event) {
+        event.registerServerCommand(new TeleportCommand());
+    }
 
 
     public static final PersonaTab creativeTab = new PersonaTab();
