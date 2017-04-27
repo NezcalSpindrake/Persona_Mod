@@ -17,6 +17,7 @@ public class ItemContractorsKey extends Item {
         setUnlocalizedName(PersonaMod.MODID + ".itemContractorsKey");     // Used for localization (en_US.lang)
         GameRegistry.register(this);
         setCreativeTab(PersonaMod.creativeTab);
+        setMaxStackSize(1);
     }
     @SideOnly(Side.CLIENT)
     public void initModel() {

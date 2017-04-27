@@ -1,6 +1,5 @@
 package nezcal.persona;
 
-
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
@@ -9,12 +8,12 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 /**
- * Created by nezcal on 4/19/2017 at 11:43 PM.
+ * Created by nezcal on 4/27/2017 at 7:28 AM.
  */
-public class ItemArcanaCard extends Item {
-    public ItemArcanaCard() {
-        setRegistryName("itemArcanaCard");        // The unique name (within your mod) that identifies this item
-        setUnlocalizedName(PersonaMod.MODID + ".itemArcanaCard");     // Used for localization (en_US.lang)
+public class ItemEvoker extends Item {
+    public ItemEvoker() {
+        setRegistryName("itemEvoker");        // The unique name (within your mod) that identifies this item
+        setUnlocalizedName(PersonaMod.MODID + ".itemEvoker");     // Used for localization (en_US.lang)
         GameRegistry.register(this);
         setCreativeTab(PersonaMod.creativeTab);
         setMaxStackSize(1);
@@ -24,4 +23,6 @@ public class ItemArcanaCard extends Item {
     public void initModel() {
         ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
     }
+
+
 }
