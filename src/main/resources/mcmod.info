@@ -1,4 +1,6 @@
-[{
+{
+  "modListVersion": 2,
+  "modList": [{
   "modid": "persona",
   "name": "Persona",
   "description": "Brings the ideas of Persona into minecraft",
@@ -10,7 +12,6 @@
   "dependencies": [
        "mod_MinecraftForge"
     ],
-  "credits": "Alsender - textures
-   Resident Dog Lover: Seanathan "Sean" Gaygen - textures
-   McJty, shadowfacts, bedrockminer - tutorials",
+  "credits": "Alsender - textures \n Resident Dog Lover: Seanathan \"Sean\" Gaygen - textures \n McJty, shadowfacts, bedrockminer - tutorials"
 }]
+}
