@@ -11,12 +11,11 @@ public class ModItems {
 
     public static ItemContractorsKey contractorsKey;
 
-    public static ItemEvoker evoker;
+    
 
     public static void init() {
         arcanaCard = new ItemArcanaCard();
         contractorsKey = new ItemContractorsKey();
-        evoker = new ItemEvoker();
     }
 
 
@@ -25,7 +24,6 @@ public class ModItems {
 
         arcanaCard.initModel();
         contractorsKey.initModel();
-        evoker.initModel();
     }
 
 
