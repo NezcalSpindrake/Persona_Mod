@@ -1,7 +1,7 @@
 package nezcal.persona;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.entity.EntityHanging;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -14,7 +14,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import javax.annotation.Nullable;
 
 
 /**
@@ -33,16 +32,17 @@ public class ItemContractorsKey extends Item {
         BlockPos blockPos = pos.offset(facing);
 
         if (facing != EnumFacing.DOWN && facing != EnumFacing.UP && player.canPlayerEdit(blockPos, facing, itemStack)) {
-            EntityHanging entityhanging = this.createEntity(worldIn, blockPos, facing);
+            Entity door = new EntityVelvetDoor(worldIn, blockPos);
+            return EnumActionResult.SUCCESS;
+        } else{
+            return EnumActionResult.FAIL;
         }
+
     }
 
 
 
-    @Nullable
-    private EntityHanging createEntity(World worldIn, BlockPos pos, EnumFacing clickedSide) {
-        return (EntityHanging)(this.);
-    }
+
     @SideOnly(Side.CLIENT)
     public void initModel() {
         ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));

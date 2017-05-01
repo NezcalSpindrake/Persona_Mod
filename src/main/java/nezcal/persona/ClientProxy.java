@@ -1,7 +1,8 @@
 package nezcal.persona;
 
+import net.minecraft.entity.EntityHanging;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import static nezcal.persona.ModItems.arcanaCard;
 
 
 /**
@@ -14,6 +15,7 @@ public class ClientProxy extends CommonProxy {
         // Typically initialization of models and such goes here:
         //ModRenderers.preInit();
         ModItems.initModels();
+        RenderingRegistry.registerEntityRenderingHandler(EntityHanging.class, RenderVelvetDoor::new);
     }
 
 }
