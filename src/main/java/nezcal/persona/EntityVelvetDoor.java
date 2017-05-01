@@ -39,8 +39,12 @@ public class EntityVelvetDoor extends EntityHanging {
     @Override
     public void onCollideWithPlayer(EntityPlayer entityIn)
     {
-        if (world.provider.getDimension() == 0 || world.provider.getDimension() == 1 || world.provider.getDimension() == -1) {
+        int previousDimension = 0;
+        if (world.provider.getDimension() != Config.dimensionId) {
+            previousDimension = world.provider.getDimension();
             CustomTeleporter.teleportToDimension(entityIn, Config.dimensionId, 0, 100, 0);
+        } else if (world.provider.getDimension() == Config.dimensionId){
+            CustomTeleporter.teleportToDimension(entityIn, previousDimension, 0, 100, 0);
         }
     }
 

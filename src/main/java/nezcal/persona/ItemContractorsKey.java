@@ -32,7 +32,7 @@ public class ItemContractorsKey extends Item {
         BlockPos blockPos = pos.offset(facing);
 
         if (facing != EnumFacing.DOWN && facing != EnumFacing.UP && player.canPlayerEdit(blockPos, facing, itemStack)) {
-            Entity door = new EntityVelvetDoor(worldIn, blockPos);
+            worldIn.spawnEntity(new EntityVelvetDoor(worldIn, blockPos));
             return EnumActionResult.SUCCESS;
         } else{
             return EnumActionResult.FAIL;
