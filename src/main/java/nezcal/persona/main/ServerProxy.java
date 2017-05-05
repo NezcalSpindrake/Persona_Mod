@@ -1,4 +1,4 @@
-package nezcal.persona;
+package nezcal.persona.main;
 
 /**
  * Created by nezcal on 4/19/2017 at 11:33 PM.

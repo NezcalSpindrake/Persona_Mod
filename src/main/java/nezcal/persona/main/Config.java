@@ -1,4 +1,4 @@
-package nezcal.persona;
+package nezcal.persona.main;
 
 
 import net.minecraftforge.common.config.Configuration;

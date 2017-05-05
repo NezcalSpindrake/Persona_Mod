@@ -1,7 +1,8 @@
-package nezcal.persona;
+package nezcal.persona.main;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+import nezcal.persona.item.ModItems;
 
 /**
  * Created by nezcal on 4/21/2017 at 3:53 AM.

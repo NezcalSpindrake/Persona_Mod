@@ -1,11 +1,15 @@
-package nezcal.persona;
+package nezcal.persona.main;
 
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.CapabilityInject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import nezcal.persona.commands.TeleportCommand;
+import nezcal.persona.handlers.IDimensionDataHandler;
 
 
 /**
@@ -18,7 +22,7 @@ public class PersonaMod {
     public static final String MODNAME = "Persona";
     public static final String MODVERSION = "0.0.1";
 
-    @SidedProxy(clientSide = "nezcal.persona.ClientProxy", serverSide = "nezcal.persona.ServerProxy")
+    @SidedProxy(clientSide = "nezcal.persona.main.ClientProxy", serverSide = "nezcal.persona.main.ServerProxy")
     public static CommonProxy proxy;
 
     @Mod.Instance
@@ -44,6 +48,7 @@ public class PersonaMod {
         event.registerServerCommand(new TeleportCommand());
     }
 
-
+    @CapabilityInject(IDimensionDataHandler.class)
+    public static final Capability<IDimensionDataHandler> CAPABILITY_DIMENSION_DATA = null;
     public static final PersonaTab creativeTab = new PersonaTab();
 }

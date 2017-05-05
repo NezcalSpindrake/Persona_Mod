@@ -1,4 +1,4 @@
-package nezcal.persona;
+package nezcal.persona.item;
 
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -7,6 +7,7 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import nezcal.persona.main.PersonaMod;
 
 /**
  * Created by nezcal on 4/19/2017 at 11:43 PM.

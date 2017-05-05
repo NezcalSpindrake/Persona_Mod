@@ -1,4 +1,4 @@
-package nezcal.persona;
+package nezcal.persona.commands;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;

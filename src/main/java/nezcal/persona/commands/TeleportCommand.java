@@ -1,4 +1,4 @@
-package nezcal.persona;
+package nezcal.persona.commands;
 
 import com.google.common.collect.Lists;
 import com.sun.istack.internal.Nullable;
@@ -10,6 +10,7 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
+import nezcal.persona.main.PersonaMod;
 
 import javax.annotation.Nonnull;
 import java.util.Collections;

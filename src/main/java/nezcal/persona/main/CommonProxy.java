@@ -1,12 +1,16 @@
-package nezcal.persona;
+package nezcal.persona.main;
 
 
-import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.registry.EntityRegistry;
+import nezcal.persona.dimension.PersonaModDimensions;
+import nezcal.persona.handlers.DefaultDimensionHandler;
+import nezcal.persona.handlers.IDimensionDataHandler;
+import nezcal.persona.handlers.Storage;
+import nezcal.persona.item.ModItems;
 
 import java.io.File;
 
@@ -27,7 +31,7 @@ public class CommonProxy {
         File directory = e.getModConfigurationDirectory();
         config = new Configuration(new File(directory.getPath(), "Persona.cfg"));
         Config.readConfig();
-        EntityRegistry.registerModEntity(new ResourceLocation(PersonaMod.MODID, "velvetDoor"), EntityVelvetDoor.class, PersonaMod.MODID+".velvetDoor", 0, PersonaMod.instance, 64, 1, false);
+        CapabilityManager.INSTANCE.register(IDimensionDataHandler.class, new Storage(), DefaultDimensionHandler.class);
     }
 
     public void init(FMLInitializationEvent e) {

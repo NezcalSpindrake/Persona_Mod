@@ -1,7 +1,9 @@
-package nezcal.persona;
+package nezcal.persona.dimension;
 
 import net.minecraft.world.DimensionType;
 import net.minecraftforge.common.DimensionManager;
+import nezcal.persona.main.Config;
+import nezcal.persona.main.PersonaMod;
 
 /**
  * Created by nezcal on 4/26/2017 at 3:59 AM.

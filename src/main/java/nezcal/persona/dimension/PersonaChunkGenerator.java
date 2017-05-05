@@ -1,4 +1,4 @@
-package nezcal.persona;
+package nezcal.persona.dimension;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;

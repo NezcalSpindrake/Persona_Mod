@@ -1,7 +1,6 @@
-package nezcal.persona;
+package nezcal.persona.item;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -14,7 +13,7 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
+import nezcal.persona.main.PersonaMod;
 
 
 /**
@@ -32,13 +31,8 @@ public class ItemContractorsKey extends Item {
         ItemStack itemStack = player.getHeldItem(hand);
         BlockPos blockPos = pos.offset(facing);
 
-        if (facing != EnumFacing.DOWN && facing != EnumFacing.UP && player.canPlayerEdit(blockPos, facing, itemStack)) {
-            worldIn.spawnEntity(new EntityVelvetDoor(worldIn, blockPos));
-            return EnumActionResult.SUCCESS;
-        } else{
-            return EnumActionResult.FAIL;
-        }
 
+        return EnumActionResult.SUCCESS;
     }
 
 
