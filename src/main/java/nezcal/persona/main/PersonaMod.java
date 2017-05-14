@@ -8,6 +8,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import nezcal.persona.commands.PersonaContractorCommand;
 import nezcal.persona.commands.TeleportCommand;
 import nezcal.persona.handlers.IDimensionDataHandler;
 
@@ -46,6 +47,7 @@ public class PersonaMod {
     @Mod.EventHandler
     public void serverLoad(FMLServerStartingEvent event) {
         event.registerServerCommand(new TeleportCommand());
+        event.registerServerCommand(new PersonaContractorCommand());
     }
 
     @CapabilityInject(IDimensionDataHandler.class)

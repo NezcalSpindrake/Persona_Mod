@@ -8,3 +8,7 @@ itemGroup.persona=Persona
 
 item.persona.itemArcanaCard.name=Arcana Card
 item.persona.itemContractorsKey.name=Contractor's Key
+
+#commands
+
+commands.setcontractor.usage=/SetContractor <true/false> <player>

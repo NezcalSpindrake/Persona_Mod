@@ -1,6 +1,7 @@
 package nezcal.persona.main;
 
 
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -8,6 +9,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import nezcal.persona.dimension.PersonaModDimensions;
 import nezcal.persona.handlers.DefaultDimensionHandler;
+import nezcal.persona.handlers.EventHandler;
 import nezcal.persona.handlers.IDimensionDataHandler;
 import nezcal.persona.handlers.Storage;
 import nezcal.persona.item.ModItems;
@@ -32,6 +34,7 @@ public class CommonProxy {
         config = new Configuration(new File(directory.getPath(), "Persona.cfg"));
         Config.readConfig();
         CapabilityManager.INSTANCE.register(IDimensionDataHandler.class, new Storage(), DefaultDimensionHandler.class);
+        MinecraftForge.EVENT_BUS.register(EventHandler.class);
     }
 
     public void init(FMLInitializationEvent e) {

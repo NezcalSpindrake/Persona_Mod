@@ -8,6 +8,8 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import nezcal.persona.main.PersonaMod;
 
+import static nezcal.persona.handlers.DefaultDimensionHandler.getHandler;
+
 /**
  * Created by nezcal on 5/5/2017 at 2:54 PM.
  */
@@ -21,11 +23,15 @@ public class EventHandler {
         }
     }
 
-    /*@SubscribeEvent
+    @SubscribeEvent
     public void clonePlayer(PlayerEvent.Clone event) {
 
         final IDimensionDataHandler original = getHandler(event.getOriginal());
         final IDimensionDataHandler clone = getHandler(event.getEntity());
         clone.setPlayerPreviousDimension(original.getPlayerPreviousDimension());
-    }*/
+        clone.setPlayerPreviousX(original.getPlayerPreviousX());
+        clone.setPlayerPreviousY(original.getPlayerPreviousY());
+        clone.setPlayerPreviousZ(original.getPlayerPreviousZ());
+        clone.setPlayerIsContractor(original.getPlayerIsContractor());
+    }
 }
