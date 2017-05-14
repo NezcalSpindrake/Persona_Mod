@@ -10,12 +10,9 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.DimensionType;
 import net.minecraft.world.World;
 import nezcal.persona.handlers.DefaultDimensionHandler;
-import nezcal.persona.handlers.IDimensionDataHandler;
 import nezcal.persona.tile.VelvetDoor;
 
 import java.util.Random;

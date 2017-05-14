@@ -22,8 +22,8 @@ import nezcal.persona.main.PersonaMod;
 public class ItemContractorsKey extends Item {
     public ItemContractorsKey() {
 
-        setRegistryName("itemContractorsKey");        // The unique name (within your mod) that identifies this item
-        setUnlocalizedName(PersonaMod.MODID + ".itemContractorsKey");     // Used for localization (en_US.lang)
+        setRegistryName("itemcontractorskey");        // The unique name (within your mod) that identifies this item
+        setUnlocalizedName(PersonaMod.MODID + ".itemcontractorskey");     // Used for localization (en_US.lang)
         GameRegistry.register(this);
         setCreativeTab(PersonaMod.creativeTab);
     }

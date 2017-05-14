@@ -32,7 +32,7 @@ public class PersonaContractorCommand extends CommandBase {
     }
 
     public String getUsage(@Nonnull ICommandSender sender) {
-        return "commands.setcontractor.usage";
+        return "SetContractor <true/false> (player)";
     }
 
     public String getName() {
@@ -46,30 +46,32 @@ public class PersonaContractorCommand extends CommandBase {
     @Override
     public void execute(@Nonnull MinecraftServer server, @Nonnull ICommandSender sender, @Nonnull String[] args) throws CommandException {
         if (args.length < 1) {
-            throw new CommandException("commands.setcontractor.usage", new Object[0]);
+            throw new CommandException("SetContractor <true/false> (player)", new Object[0]);
         }
         EntityPlayer entityPlayer;
+        boolean isContractor = parseBoolean(args[0]);
 
         if (args.length >= 2) {
             entityPlayer = getPlayer(server, sender, args[1]);
         }else {
             entityPlayer = getCommandSenderAsPlayer(sender);
         }
-        DefaultDimensionHandler.getHandler(entityPlayer).setPlayerIsContractor(parseBoolean(args[0]));
+        DefaultDimensionHandler.getHandler(entityPlayer).setPlayerIsContractor(isContractor);
     }
+
 
     public List<String> getTabCompletions(MinecraftServer server, ICommandSender sender, String[] args, @Nullable BlockPos targetPos)
     {
         return args.length == 1 ? getListOfStringsMatchingLastWord(args, new String[] {"true", "false"}): (args.length == 2 ? getListOfStringsMatchingLastWord(args, server.getOnlinePlayerNames()) : Collections.emptyList());
     }
 
-    public static boolean parseBoolean(String input) throws CommandException
+    public static boolean parseBoolean(@Nonnull String input) throws CommandException
     {
         if (!"true".equals(input) && !"1".equals(input))
         {
             if (!"false".equals(input) && !"0".equals(input))
             {
-                throw new CommandException("commands.generic.boolean.invalid", new Object[] {input});
+                throw new CommandException("Invalid Boolean", new Object[] {input});
             }
             else
             {

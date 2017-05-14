@@ -1,14 +1,11 @@
-# 
+
 
 itemGroup.persona=Persona
 
-#blocks
 
-#items
 
-item.persona.itemArcanaCard.name=Arcana Card
-item.persona.itemContractorsKey.name=Contractor's Key
+item.persona.itemarcanacard.name=Arcana Card
+item.persona.itemcontractorskey.name=Contractor's Key
 
-#commands
 
-commands.setcontractor.usage=/SetContractor <true/false> <player>
+

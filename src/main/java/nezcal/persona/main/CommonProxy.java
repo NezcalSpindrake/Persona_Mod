@@ -7,6 +7,7 @@ import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import nezcal.persona.blocks.ModBlocks;
 import nezcal.persona.dimension.PersonaModDimensions;
 import nezcal.persona.handlers.DefaultDimensionHandler;
 import nezcal.persona.handlers.EventHandler;
@@ -26,7 +27,7 @@ public class CommonProxy {
 
     public void preInit(FMLPreInitializationEvent e) {
        // Initialization of blocks and items typically goes here:
-       // ModBlocks.init();
+        ModBlocks.init();
         ModItems.init();
        // ModCrafting.init();
         PersonaModDimensions.init();

@@ -14,8 +14,8 @@ import nezcal.persona.main.PersonaMod;
  */
 public class ItemArcanaCard extends Item {
     public ItemArcanaCard() {
-        setRegistryName("itemArcanaCard");        // The unique name (within your mod) that identifies this item
-        setUnlocalizedName(PersonaMod.MODID + ".itemArcanaCard");     // Used for localization (en_US.lang)
+        setRegistryName("itemarcanacard");        // The unique name (within your mod) that identifies this item
+        setUnlocalizedName(PersonaMod.MODID + ".itemarcanacard");     // Used for localization (en_US.lang)
         GameRegistry.register(this);
         setCreativeTab(PersonaMod.creativeTab);
     }
