@@ -35,7 +35,7 @@ public class CommonProxy {
         config = new Configuration(new File(directory.getPath(), "Persona.cfg"));
         Config.readConfig();
         CapabilityManager.INSTANCE.register(IDimensionDataHandler.class, new Storage(), DefaultDimensionHandler.class);
-        MinecraftForge.EVENT_BUS.register(EventHandler.class);
+        MinecraftForge.EVENT_BUS.register(new EventHandler());
     }
 
     public void init(FMLInitializationEvent e) {

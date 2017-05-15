@@ -7,6 +7,8 @@ import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponentTranslation;
 import nezcal.persona.handlers.DefaultDimensionHandler;
 import nezcal.persona.main.PersonaMod;
 
@@ -57,6 +59,13 @@ public class PersonaContractorCommand extends CommandBase {
             entityPlayer = getCommandSenderAsPlayer(sender);
         }
         DefaultDimensionHandler.getHandler(entityPlayer).setPlayerIsContractor(isContractor);
+        if (sender.getEntityWorld().getGameRules().getBoolean("sendCommandFeedback")) {
+
+            if (sender != entityPlayer) {
+
+            }
+        }
+
     }
 
 
